@@ -1,0 +1,3 @@
+{
+  "app": ".././gradlew :infrastructure:run  --warning-mode all"
+}
