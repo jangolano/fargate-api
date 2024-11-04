@@ -23,9 +23,6 @@ class Stack(scope: Construct, id: String, props: StackProps) : Stack(scope, id, 
 
         val cluster = Cluster(this, "my-test-cluster", ClusterProps.builder().vpc(vpc).build())
 
-        val repository =
-            Repository.fromRepositoryArn(this, "ecr-repo", "arn:aws:ecr:us-east-1:033512919333:repository/fargate-api")
-
 
         val securityGroup = SecurityGroup.Builder.create(this, "fargate-api-security-group")
             .vpc(vpc).build()
